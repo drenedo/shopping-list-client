@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg75"
+   sodipodi:docname="lines.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs79" />
+  <sodipodi:namedview
+     id="namedview77"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.00875"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="align-justify" />
+  <title
+     id="title61" />
+  <g
+     id="Complete">
+    <g
+       id="align-justify">
+      <g
+         id="g71">
+        <polygon
+           fill="#ffffff"
+           points="20 18 4 18 4 18 20 18 20 18"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           id="polygon63" />
+        <polygon
+           fill="#ffffff"
+           points="20 14 4 14 4 14 20 14 20 14"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           id="polygon65" />
+        <polygon
+           fill="#ffffff"
+           points="4,10 20,10 4,10 "
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           id="polygon67"
+           transform="matrix(0.57915933,0,0,1,1.6547135,0)" />
+        <polygon
+           fill="#ffffff"
+           points="4,6 4,6 20,6 "
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           stroke-width="2"
+           id="polygon69"
+           transform="matrix(0.58996378,0,0,1,1.6401449,0)" />
+      </g>
+    </g>
+  </g>
+</svg>
