@@ -121,9 +121,6 @@
     .icon {
         max-width: 50px;
     }
-    .total-margin {
-        margin-right: 101px;
-    }
     .total-input {
         max-width: 137px;
     }
