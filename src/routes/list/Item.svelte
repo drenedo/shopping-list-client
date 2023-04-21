@@ -12,8 +12,6 @@
     const ACTIVE = 'ACTIVE';
     const INACTIVE = 'INACTIVE';
 
-    let status: string = item.status;
-
      function select(){
         if(item.status != CANCELED){
             const temporalStatus = item.status === ACTIVE ? INACTIVE : ACTIVE;
@@ -37,7 +35,7 @@
 
     async function submitStatus(temporalStatus: string){
         await Fetcher.post('/api/v1/items/' + item.id + '/status/' + temporalStatus).then(response => {
-            status = temporalStatus;
+            const status = temporalStatus;
             item.status = status;
         })
         .catch(err => Error.go(err))
@@ -49,13 +47,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-sm-8">
-            {#if status === 'ACTIVE'}
+            {#if item.status === 'ACTIVE'}
                 <span class="display-4 fw-bold">{item.amount}</span>
                 <span class="display-5">{item.unit || ""}</span>
                 <span class="display-6">of</span>
                 <span class="display-6 fw-bold">{item.name}</span>
                 <span class="display-5">{item.brand || ""}</span>
-            {:else if status === 'CANCELED'}
+            {:else if item.status === 'CANCELED'}
                 <span class="display-6 text-danger"><del>{item.amount} {item.unit || ""} of {item.name} {item.brand || ""}</del></span>
             {:else}
                 <span class="display-6"><del>{item.amount} {item.unit || ""} of {item.name} {item.brand || ""}</del></span>
@@ -63,7 +61,7 @@
             </div>
             <div class="col-md-2 col-sm-4">
                 <div class="d-flex justify-content-end">
-                    {#if status !== CANCELED}
+                    {#if item.status !== CANCELED}
                         <button type="button" class="btn btn-warning" on:click|stopPropagation={cancel}><i class="bi-x fs-5"></i></button>
                     {:else}
                         <button type="button" class="btn btn-primary" on:click|stopPropagation={active}><i class="bi-arrow-clockwise fs-5"></i></button>

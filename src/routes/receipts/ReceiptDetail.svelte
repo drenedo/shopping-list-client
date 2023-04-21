@@ -44,6 +44,11 @@
             <div class="col-md-10 col-sm-8">{receipt.created.toLocaleDateString()} {receipt.created.toLocaleTimeString()}</div>
             <div class="col-md-2 col-sm-4">
                 <div class="d-flex justify-content-end">
+                    {#if receipt.category} 
+                        <img src="/images/{receipt.category.toLowerCase()}.png" alt="{receipt.category.toLowerCase()}" class="icon" />
+                    {:else}
+                        <img src="/images/other.png" alt="other" class="icon" />
+                    {/if}
                     {#if receipt.cash === true} 
                         <img src="/images/money.svg" alt="money" class="icon" />
                     {:else if receipt.cash === false}
@@ -82,6 +87,7 @@
     }
     .icon {
         max-width: 40px;
+        margin-right: 7px;
     }
     .line {
         margin-left: -14px;

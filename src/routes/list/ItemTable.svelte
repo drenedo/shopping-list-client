@@ -70,7 +70,9 @@
     function addItem(request: ItemRequest) {
         modalIsOpen = false;
         items.push(new FullItem(request.id, request.name, request.amount, request.unit, request.brand, 'ACTIVE'));
+        items.sort((a, b) => a.status > b.status ? 1 : -1);
         items = items;
+        console.log(items);
     }
 
     function sumAmount(){
