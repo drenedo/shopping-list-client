@@ -104,7 +104,7 @@
                         <img src="/images/transport.png" alt="transport" class="icon {receipt.category === 'TRANSPORT' ? 'selected' : ''}" on:click={() => receipt.category = 'TRANSPORT'} on:keydown={() => receipt.category = 'TRANSPORT'} />
                         <img src="/images/clothes.png" alt="clothes" class="icon {receipt.category === 'CLOTHES' ? 'selected' : ''}" on:click={() => receipt.category = 'CLOTHES'} on:keydown={() => receipt.category = 'CLOTHES'} />
                         <img src="/images/house.png" alt="house" class="icon {receipt.category === 'HOUSE' ? 'selected' : ''}" on:click={() => receipt.category = 'HOUSE'} on:keydown={() => receipt.category = 'HOUSE'} />
-                        <img src="/images/entretainment.png" alt="entretainment" class="icon {receipt.category === 'ENTRETAINMENT' ? 'selected' : ''}" on:click={() => receipt.category = 'ENTRETAINMENT'} on:keydown={() => receipt.category = 'ENTRETAINMENT'} />
+                        <img src="/images/entertainment.png" alt="entertainment" class="icon {receipt.category === 'ENTERTAINMENT' ? 'selected' : ''}" on:click={() => receipt.category = 'ENTERTAINMENT'} on:keydown={() => receipt.category = 'ENTRETAINMENT'} />
                         <img src="/images/other.png" alt="other" class="icon {receipt.category === null ? 'selected' : ''}" on:click={() => receipt.category = null} on:keydown={() => receipt.category = null} />
                     </div>
                 {/if}
@@ -148,6 +148,7 @@
         max-width: 50px;
         float: right;
         margin-right: 2%;
+        cursor: pointer;
     }
     .total-input {
         max-width: 137px;

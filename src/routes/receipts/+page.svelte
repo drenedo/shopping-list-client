@@ -14,6 +14,7 @@
     let loadingCreation = false;
     let shakeReceipt: boolean = false;
     let errorInImage: boolean = false;
+    let errorMessage: string;
     let modalReceipt: string | undefined;
     let receipt: Receipt | null;
 
@@ -134,6 +135,8 @@
             .then(response => {
                 if(response.status != 201){
                     errorInImage = true;
+                    response.json().then(body => errorMessage = body.message);
+                    //errorMessage = response.json().message;
                     loadingCreation = false;
                     throw new Error("cancel");
                 }
@@ -261,14 +264,14 @@
                                 <img src="/images/transport.png" alt="transport" class="icon {category === 'TRANSPORT' ? 'selected' : ''}" on:click={() => selectCategory('TRANSPORT')} on:keydown={() => selectCategory('TRANSPORT')} />
                                 <img src="/images/clothes.png" alt="clothes" class="icon {category === 'CLOTHES' ? 'selected' : ''}" on:click={() => selectCategory('CLOTHES')} on:keydown={() => selectCategory('CLOTHES')} />
                                 <img src="/images/house.png" alt="house" class="icon {category === 'HOUSE' ? 'selected' : ''}" on:click={() => selectCategory('HOUSE')} on:keydown={() => selectCategory('HOUSE')} />
-                                <img src="/images/entretainment.png" alt="entretainment" class="icon {category === 'ENTRETAINMENT' ? 'selected' : ''}" on:click={() => selectCategory('ENTRETAINMENT')} on:keydown={() => selectCategory('ENTRETAINMENT')} />
+                                <img src="/images/entertainment.png" alt="entertainment" class="icon {category === 'ENTRETAINMENT' ? 'selected' : ''}" on:click={() => selectCategory('ENTRETAINMENT')} on:keydown={() => selectCategory('ENTRETAINMENT')} />
                                 <img src="/images/other.png" alt="other" class="icon {category === null ? 'selected' : ''}" on:click={() => selectCategory(null)} on:keydown={() => selectCategory(null)} />
                             </div>
                         </div>
                     </div>
                 {/if}
                 {#if errorInImage}
-                    <div class="alert alert-danger">Sorry, the program couldn't extract information from the image</div>
+                    <div class="alert alert-danger">Sorry, the program couldn't extract information from the image. Reason: {errorMessage}</div>
                 {/if}
                 {#if loadingCreation}
                     <Loading width="45" />
